@@ -1,7 +1,7 @@
 body {
-    font-size: 15pt;
-    background: #116aa6;
-    font-family: 'Baloo Chettan 2';
+  font-size: 15pt;
+  background: #116aa6;
+  font-family: "Baloo Chettan 2";
 }
 
 .elem {
@@ -20,7 +20,7 @@ body {
   text-align: center;
 }
 
-.displayContainer .genBtn .generate{
+.displayContainer .genBtn .generate {
   background: #3498db;
   color: #fff;
   display: inline-block;
@@ -32,15 +32,15 @@ body {
   text-decoration: none;
   box-shadow: 0px 3px 0px #266792;
   border-color: #3498db;
-  font-family: 'Baloo Chettan 2';
+  font-family: "Baloo Chettan 2";
   border-radius: 15px 15px 15px 15px;
 }
 
-.displayContainer .genBtn .generate span{
+.displayContainer .genBtn .generate span {
   margin-left: 5px;
 }
 
-.displayContainer .displayBox .noteDisplay{
+.displayContainer .displayBox .noteDisplay {
   height: 40px;
   width: 50px;
   cursor: default;
@@ -48,11 +48,11 @@ body {
   color: #fff;
   border-color: #266792;
   text-align: center;
-  font-size: 1.10em;
-  font-family: 'Baloo Chettan 2';
+  font-size: 1.1em;
+  font-family: "Baloo Chettan 2";
 }
 
-.elem .elemText{
+.elem .elemText {
   color: #ffffff;
 }
 

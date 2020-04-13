@@ -29,10 +29,10 @@
     console.log(uName);
   }
 })()*/
-window.onload =function(){
+window.onload = function () {
   const auth = firebase.auth();
   const db = firebase.firestore();
-  auth.onAuthStateChanged(user => {
+  auth.onAuthStateChanged((user) => {
     if (!user) {
       Swal.fire({
         title: "Saludos",
@@ -42,16 +42,14 @@ window.onload =function(){
         cancelButtonText: "Regístrarse",
         icon: "info",
         backdrop: true,
-        padding: "0.8rem"
+        padding: "0.8rem",
       }).then((result) => {
         if (result.value) {
-          window.location.href = "loginPage.html"
-        } else if (
-          result.dismiss === Swal.DismissReason.cancel
-        ) {
-          window.location.href = "signupPage.html"
+          window.location.href = "loginPage.html";
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+          window.location.href = "signupPage.html";
         }
-      })
+      });
     }
-  })
-}
+  });
+};

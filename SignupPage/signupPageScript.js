@@ -1,48 +1,51 @@
-window.onload = function() {
+window.onload = function () {
   var signupForm = document.querySelector("#signupForm");
-  if(signupForm){
-    signupForm.addEventListener('submit', (e) => {
+  if (signupForm) {
+    signupForm.addEventListener("submit", (e) => {
       e.preventDefault();
-    
-      var email = signupForm['signupEmail'].value;
-      var password = signupForm['signupPassword'].value;
-      var username = signupForm['signupName'].value;
-    
-      auth.createUserWithEmailAndPassword(email, password).then(cred => {
-        const userEmail = cred.user.email;
-        console.log(cred);
-        Swal.fire({
-          title: "Registrado Correctamente",
-          text: "Usted se ha registrado exitosamente",
-          confirmButtonColor: "#2ecc71",
-          confirmButtonText: "Perfecto"
-        }).then(() => {
-          setTimeout(function(){
-            window.location.href = "index.html"
-          }, 400)
+
+      var email = signupForm["signupEmail"].value;
+      var password = signupForm["signupPassword"].value;
+      var username = signupForm["signupName"].value;
+
+      auth
+        .createUserWithEmailAndPassword(email, password)
+        .then((cred) => {
+          const userEmail = cred.user.email;
+          console.log(cred);
           Swal.fire({
-            title: "Redirigiendote...",
-            onBeforeOpen: () => {
-              Swal.showLoading();
-            }
-          })
+            title: "Registrado Correctamente",
+            text: "Usted se ha registrado exitosamente",
+            confirmButtonColor: "#2ecc71",
+            confirmButtonText: "Perfecto",
+          }).then(() => {
+            setTimeout(function () {
+              window.location.href = "index.html";
+            }, 400);
+            Swal.fire({
+              title: "Redirigiendote...",
+              onBeforeOpen: () => {
+                Swal.showLoading();
+              },
+            });
+          });
         })
-      }).catch(err => {
-        Swal.fire({
-              title: "Hubo un error",
-              text: "Ha sucedido un error: " + err.message,
-              icon: "error"
-        })
-      })
-    })
+        .catch((err) => {
+          Swal.fire({
+            title: "Hubo un error",
+            text: "Ha sucedido un error: " + err.message,
+            icon: "error",
+          });
+        });
+    });
   } else {
-    console.log("No se ha encontrado nada")
+    console.log("No se ha encontrado nada");
   }
   function redirectAndReset() {
     signupForm.reset();
     window.location.href = "index.html";
   }
-  
+
   var firebaseConfig = {
     apiKey: "AIzaSyCsFBpqVFA-5B0i4mL4cg2FHKQvgyX7qAY",
     authDomain: "rdg-1220.firebaseapp.com",
@@ -51,14 +54,12 @@ window.onload = function() {
     storageBucket: "rdg-1220.appspot.com",
     messagingSenderId: "736549219111",
     appId: "1:736549219111:web:473c1270f3d846c7ad5702",
-    measurementId: "G-GDN2EH6GXK"
+    measurementId: "G-GDN2EH6GXK",
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
-  
+
   const auth = firebase.auth();
   const db = firebase.firestore();
-}
-  
-  
+};

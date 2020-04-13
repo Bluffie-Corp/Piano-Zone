@@ -1,21 +1,21 @@
-body{
+body {
   margin: 0;
   padding: 0;
-  font-family: 'Baloo Chettan 2';
+  font-family: "Baloo Chettan 2";
   background: #34495e;
 }
 
-.box h1{
+.box h1 {
   color: white;
   text-transform: uppercase;
   font-weight: 500;
 }
 
-.box h4{
+.box h4 {
   color: white;
 }
 
-.box{
+.box {
   width: 300px;
   padding: 40px;
   position: absolute;
@@ -26,7 +26,8 @@ body{
   text-align: center;
 }
 
-.box input[type="text"],.box input[type="password"]{
+.box input[type="text"],
+.box input[type="password"] {
   border: 0;
   background: none;
   display: block;
@@ -41,7 +42,8 @@ body{
   transition: 0.25s;
 }
 
-.box input[type="text"]:focus,.box input[type="password"]:focus{
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
   width: 280px;
   border-color: #2ecc71;
 }
@@ -64,7 +66,7 @@ body{
 .box input[type="submit"]:hover{
   background: #2ecc71;
 }*/
-.box .sub{
+.box .sub {
   border: 0;
   background: none;
   display: block;
@@ -79,16 +81,16 @@ body{
   cursor: pointer;
 }
 
-.box .sub:hover{
+.box .sub:hover {
   background: #2ecc71;
 }
-.signUpHere{
+.signUpHere {
   color: white;
   text-align: center;
   padding-top: 0px;
 }
 
-a{
+a {
   transform: translate(6px, -35px);
   display: block;
   position: absolute;
@@ -107,21 +109,21 @@ a{
   z-index: 1;
 }
 
-a:hover{
+a:hover {
   animation: animate 8s linear infinite;
 }
 
-@keyframes animate{
+@keyframes animate {
   0% {
-    background-position: 0%
+    background-position: 0%;
   }
-  100%{
-    background-position: 400%
+  100% {
+    background-position: 400%;
   }
 }
 
-a:before{
-  content: '';
+a:before {
+  content: "";
   position: absolute;
   top: -5px;
   left: -5px;
@@ -136,7 +138,7 @@ a:before{
   transition: 0.5s;
 }
 
-a:hover:before{
+a:hover:before {
   filter: blur(20px);
   opacity: 1;
   animation: animate 8s linear infinite;

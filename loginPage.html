@@ -1,51 +1,69 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Log In</title>
-   <link rel="stylesheet" href="css/styles.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@700&display=swap" rel="stylesheet">
-  <script src="LoginPage/loginPageScript.js" type="text/javascript" charset="utf-8"></script>
- <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
- <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
- <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
- <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-</head>
-<body>
-<form class="box" id="loginForm">
-  <h1>Iniciar Sesión</h1>
-  <input type="text" name="" id="email" placeholder="Correo Electrónico" required/>
-  <input type="password" name="" id="password" placeholder="Contraseña" required/>
-  <button class="sub" id="subBtn">Iniciar Sesión</button>
-  <h4 id="errorText" class="errorText"></h4>
-  <h4>¿Todavía no eres un usuario?</h4>
-  <br/>
-  <a href="signupPage.html" class="btn">Regístrate aquí</a>
-  <br/>
- </form>
- <script type="text/javascript" charset="utf-8">
-   const buttons = document.querySelectorAll('a');
-   buttons.forEach(btn => {
-     btn.addEventListener('click', function(e){
-       let x = e.clientX - e.target.offsetLeft;
-       let y = e.clientY - e.target.offsetTop;
-       
-       let ripples = document.createElement('span');
-       ripples.style.left = x + 'px';
-       ripples.style.top = y + 'px';
-       this.appendChild(ripples);
-       
-       setTimeout(() => {
-         ripples.remove()
-       }, 1000)
-     })
-   })
- </script>
-</body>
-<!-- <script type="text/javascript" charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="LoginPage/loginPageScript.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  </head>
+  <body>
+    <form class="box" id="loginForm">
+      <h1>Iniciar Sesión</h1>
+      <input
+        type="text"
+        name=""
+        id="email"
+        placeholder="Correo Electrónico"
+        required
+      />
+      <input
+        type="password"
+        name=""
+        id="password"
+        placeholder="Contraseña"
+        required
+      />
+      <button class="sub" id="subBtn">Iniciar Sesión</button>
+      <h4 id="errorText" class="errorText"></h4>
+      <h4>¿Todavía no eres un usuario?</h4>
+      <br />
+      <a href="signupPage.html" class="btn">Regístrate aquí</a>
+      <br />
+    </form>
+    <script type="text/javascript" charset="utf-8">
+      const buttons = document.querySelectorAll("a");
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+          let x = e.clientX - e.target.offsetLeft;
+          let y = e.clientY - e.target.offsetTop;
+
+          let ripples = document.createElement("span");
+          ripples.style.left = x + "px";
+          ripples.style.top = y + "px";
+          this.appendChild(ripples);
+
+          setTimeout(() => {
+            ripples.remove();
+          }, 1000);
+        });
+      });
+    </script>
+  </body>
+  <!-- <script type="text/javascript" charset="utf-8">
   var firebaseConfig = {
     apiKey: "AIzaSyCsFBpqVFA-5B0i4mL4cg2FHKQvgyX7qAY",
     authDomain: "rdg-1220.firebaseapp.com",

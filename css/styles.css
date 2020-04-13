@@ -1,21 +1,21 @@
-body{
+body {
   margin: 0;
   padding: 0;
-  font-family: 'Baloo Chettan 2';
+  font-family: "Baloo Chettan 2";
   background: rgb(17, 106, 166);
 }
 
-.box h1{
+.box h1 {
   color: white;
   text-transform: uppercase;
   font-weight: 500;
 }
 
-.box h4{
+.box h4 {
   color: white;
 }
 
-.box{
+.box {
   width: 300px;
   padding: 40px;
   position: absolute;
@@ -26,7 +26,8 @@ body{
   text-align: center;
 }
 
-.box input[type="text"],.box input[type="password"]{
+.box input[type="text"],
+.box input[type="password"] {
   border: 0;
   background: none;
   display: block;
@@ -41,7 +42,8 @@ body{
   transition: 0.25s;
 }
 
-.box input[type="text"]:focus,.box input[type="password"]:focus{
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
   width: 280px;
   border-color: #2ecc71;
 }
@@ -79,7 +81,7 @@ body{
   cursor: pointer;
 }
 
-.box .signupSub{
+.box .signupSub {
   border: 0;
   background: none;
   display: block;
@@ -94,21 +96,20 @@ body{
   cursor: pointer;
 }
 
-.box .signupSub:hover{
+.box .signupSub:hover {
   background: #2ecc71;
 }
 
-
-.box .sub:hover{
+.box .sub:hover {
   background: #2ecc71;
 }
-.signUpHere{
+.signUpHere {
   color: white;
   text-align: center;
   padding-top: 0px;
 }
 
-.btn{
+.btn {
   transform: translate(6px, -35px);
   display: block;
   position: absolute;
@@ -127,21 +128,21 @@ body{
   z-index: 1;
 }
 
-.btn:hover{
+.btn:hover {
   animation: animate 8s linear infinite;
 }
 
-@keyframes animate{
+@keyframes animate {
   0% {
     background-position: 0%;
   }
-  100%{
+  100% {
     background-position: 400%;
   }
 }
 
-.btn:before{
-  content: '';
+.btn:before {
+  content: "";
   position: absolute;
   top: -5px;
   left: -5px;
@@ -155,14 +156,14 @@ body{
   transition: 0.5s;
 }
 
-a:hover:before{
+a:hover:before {
   filter: blur(20px);
   opacity: 1;
   animation: animate 8s linear infinite;
 }
 
 body {
-  min-height: 100vh
+  min-height: 100vh;
 }
 
 #curtain {
@@ -246,7 +247,7 @@ body {
   transition-delay: 0.2s;
 }
 
-#curtain ul:hover li a{
+#curtain ul:hover li a {
   color: #0002;
 }
 
@@ -255,8 +256,8 @@ body {
   background: #fff;
 }
 
-#curtain ul li a:before{
-  content: '';
+#curtain ul li a:before {
+  content: "";
   position: absolute;
   top: 50%;
   left: 40%;
@@ -265,7 +266,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 5em;
-  color: rgba(0, 0, 0, .1);
+  color: rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   z-index: -1;
   opacity: 0;
@@ -284,23 +285,23 @@ body {
   height: 1800px;
 }
 
-#curtain ul li:nth-child(6n+1) a:before {
+#curtain ul li:nth-child(6n + 1) a:before {
   background: #81ecec;
 }
 
-#curtain ul li:nth-child(6n+2) a:before {
+#curtain ul li:nth-child(6n + 2) a:before {
   background: #ff7675;
 }
 
-#curtain ul li:nth-child(6n+3) a:before {
+#curtain ul li:nth-child(6n + 3) a:before {
   background: #55efc4;
 }
 
-#curtain ul li:nth-child(6n+4) a:before {
+#curtain ul li:nth-child(6n + 4) a:before {
   background: #a29bfe;
 }
 
-#curtain ul li:nth-child(6n+5) a:before {
+#curtain ul li:nth-child(6n + 5) a:before {
   background: #fd79a8;
 }
 
@@ -325,12 +326,12 @@ ul {
   margin: 10px 0;
 }
 
-#curtain ul li a{
+#curtain ul li a {
   text-decoration: none;
   color: #fff;
   font-size: 2.5em;
   padding: 5px 20px;
   display: block;
-  font-family: 'Poppins' ;
+  font-family: "Poppins";
   transition: 0.5s;
 }
